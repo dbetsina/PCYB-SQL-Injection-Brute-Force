@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cybersecurity Project Overview</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+        line-height: 1.6;
+      }
+      header,
+      section {
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 800px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      h1,
+      h2 {
+        color: #3ba790;
+        margin-bottom: 10px;
+      }
+      h1 {
+        font-size: 2rem;
+        text-align: center;
+      }
+      p,
+      li {
+        margin: 10px 0;
+      }
+      ul {
+        list-style-type: none;
+        padding-left: 20px;
+      }
+      ul li::before {
+        content: "";
+        color: #3ba790;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+        margin-right: 0.5em;
+      }
+      .completed::before {
+        content: "\2705"; 
+      }
+      .not-completed::before {
+        content: "\274C"; 
+      }
+      .auth-container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: full;
+        }
+
+        .auth-container h2 {
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            text-align: center;
+            color: #333;
+        }
+
+        .auth-container .input-group {
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .auth-container .input-group input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .auth-container .input-group input:focus {
+            border-color: #3ba790;
+        }
+
+        .auth-container .input-group .icon {
+            position: absolute;
+            top: 50%;
+            left: 1rem;
+            transform: translateY(-50%);
+            color: #888;
+        }
+
+        .auth-container button {
+            width: 100%;
+            padding: 0.75rem;
+            background: #3ba790;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 500;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .auth-container button:hover {
+            background: #339d78;
+        }
+
+        .auth-container .extra-options {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .auth-container .extra-options a {
+            color: #3ba790;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .auth-container .extra-options a:hover {
+            text-decoration: underline;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Cybersecurity Fundamentals Project</h1>
+      <p>
+        A project focusing on the exploration of web application vulnerabilities
+        and brute force attack techniques.
+      </p>
+    </header>
+    <section class="start" style="padding: 40px; margin: 20px auto; max-width: 800px; background: #3ba790; color: #fff; text-align: center; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        <h2 style="color: white">Ready to Start?</h2>
+        <button onclick="document.getElementById('login').scrollIntoView({ behavior: 'smooth' });" style="padding: 10px 20px; font-size: 1rem; background-color: #fff; color: #3ba790; border: none; border-radius: 5px; cursor: pointer;">Login</button>
+      </section>
+    <section>
+      <h2>Project Overview</h2>
+      <p><strong>University:</strong> Warsaw University of Technology</p>
+      <p><strong>Specialization:</strong> Telecommunications</p>
+      <p><strong>Course:</strong> Cybersecurity Fundamentals (PCYB)</p>
+      <p><strong>Semester:</strong> 24Z</p>
+      <p><strong>Team:</strong> TEAM RURA #17</p>
+      <p>
+        <strong>Members:</strong> Dana Betsina, Dawid Markowski, Emilia
+        Anczarska
+      </p>
+    </section>
+
+    <section>
+      <h2>Selected Attack Techniques</h2>
+      <ul>
+        <li>
+          <strong>Web Application Vulnerabilities:</strong> Exploit
+          Public-Facing Application
+        </li>
+        <p>
+          This attack technique attempts to exploit a vulnerability in an
+          internet-accessible host or system to gain initial network access.
+        </p>
+        <li><strong>Brute Force:</strong> Credential Stuffing</li>
+        <p>
+          This technique involves using credentials obtained from data leaks to
+          gain unauthorized access to target accounts.
+        </p>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Project Implementation Plan</h2>
+      <ul>
+        <p>
+          1. Identify issues, select tools, create a GitHub repository, and set up
+          a login form and database.
+        </p>
+
+        <ul>
+          <li class="not-completed">
+            Problem analysis and tool selection. (Betsina, Markowski, Anczarska)
+          </li>
+          <li class="completed">Create GitHub repository. (Betsina)</li>
+          <li class="completed">Develop login form web page. (Betsina)</li>
+          <li class="not-completed">
+            Database setup for storing login information. (Anczarska)
+          </li>
+        </ul>
+        <p>
+          2. Write SQL commands to retrieve login details through the
+          authentication form and test server responses.
+        </p>
+
+        <ul>
+          <li class="not-completed">
+            Write SQL command to retrieve login information through
+            authentication form. (Markowski)
+          </li>
+          <li class="not-completed">
+            Use Command Line to retrieve server response - HTML code or Network
+            tab. (Markowski)
+          </li>
+        </ul>
+        <p>
+          3. Conduct an SQL Injection attack to retrieve logins, analyze the data,
+          and prepare it for further use.
+        </p>
+
+        <ul>
+          <li class="not-completed">
+            Conduct SQL Injection attack to extract login list from the
+            database. (Anczarska)
+          </li>
+          <li class="not-completed">
+            Analyze the results and extract login data for further use.
+            (Anczarska)
+          </li>
+        </ul>
+        <p>4. Download an external list of frequently used passwords.</p>
+
+        <ul>
+          <li class="not-completed">
+            Download external list of commonly used passwords. (Markowski)
+          </li>
+        </ul>
+        <p>
+          5. Configure and execute a Brute Force attack with the retrieved logins
+          and password list, documenting and analyzing the results.
+        </p>
+
+        <ul>
+          <li class="not-completed">
+            Configure tool for Brute Force attack using extracted logins and
+            password list. (Markowski)
+          </li>
+          <li class="not-completed">
+            Conduct Brute Force attack and record results (whether login was
+            successful using common passwords). (Markowski, Anczarska, Betsina)
+          </li>
+          <li class="not-completed">
+            Document attack results and analyze effectiveness. (Markowski,
+            Anczarska, Betsina)
+          </li>
+        </ul>
+      </ul>
+    </section>
+    <section id="login">
+    <div class="auth-container">
+        <h2>Login</h2>
+        <form action="#">
+            <div class="input-group">
+                <span class="icon">
+                    <i class="fas fa-envelope"></i>
+                </span>
+                <input type="email" name="email" placeholder="Enter email" required>
+            </div>
+            <div class="input-group">
+                <span class="icon">
+                    <i class="fas fa-lock"></i>
+                </span>
+                <input type="password" name="password" placeholder="Enter password" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+  </body>
+</html>
