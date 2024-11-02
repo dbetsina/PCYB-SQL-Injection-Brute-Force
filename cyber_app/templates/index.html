@@ -259,21 +259,22 @@
     <section id="login">
     <div class="auth-container">
         <h2>Login</h2>
-        <form action="#">
-            <div class="input-group">
-                <span class="icon">
-                    <i class="fas fa-envelope"></i>
-                </span>
-                <input type="email" name="email" placeholder="Enter email" required>
-            </div>
-            <div class="input-group">
-                <span class="icon">
-                    <i class="fas fa-lock"></i>
-                </span>
-                <input type="password" name="password" placeholder="Enter password" required>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
+        <form action="/login" method="POST">
+          <div class="input-group">
+              <span class="icon">
+                  <i class="fas fa-envelope"></i>
+              </span>
+              <input type="email" name="email" placeholder="Enter email" required>
+          </div>
+          <div class="input-group">
+              <span class="icon">
+                  <i class="fas fa-lock"></i>
+              </span>
+              <input type="password" name="password" placeholder="Enter password" required>
+          </div>
+          <button type="submit">Submit</button>
+      </form>
+      
     </div>
 </section>
   </body>
