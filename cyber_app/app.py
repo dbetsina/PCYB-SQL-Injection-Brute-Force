@@ -8,14 +8,20 @@ app.secret_key = 'your_secret_key'
 def hash_password(password):
     return hashlib.sha256(password.encode()).hexdigest()
 
-def validate_user(email, password):
+
+def validate_user(login, password):
     conn = sqlite3.connect('users.db')
     cursor = conn.cursor()
     hashed_password = hash_password(password)
-    cursor.execute('SELECT * FROM users WHERE email = ? AND password = ?', (email, hashed_password))
-    user = cursor.fetchone()
-    conn.close()
-    return user
+    try:
+        query = f"SELECT * FROM users WHERE login = '{login}' AND password = '{hashed_password}'"
+        cursor.execute(query)
+        rows = cursor.fetchall()
+        conn.close()
+        return rows
+    except Exception as e:
+        conn.close()
+        return {"error": str(e)}
 
 @app.route('/')
 def home():
@@ -32,15 +38,15 @@ def hacker():
 
 @app.route('/login', methods=['POST'])
 def login():
-    email = request.form['email']
+    login = request.form['login']
     password = request.form['password']
-    user = validate_user(email, password)
+    user = validate_user(login, password)
     if user:
         session['username'] = user[1]  
         flash(f"Welcome, {user[1]}!", "success")
         return redirect(url_for('user'))
     else:
-        flash("Invalid email or password", "danger")
+        flash("Invalid login or password", "danger")
         return redirect(url_for('hacker'))
 
 if __name__ == '__main__':
